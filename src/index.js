@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 function timer(time) {
   return new Promise(function(resolve) {
-    setInterval(resolve, time);
+    setTimeout(resolve, time);
   });
 }
 class App extends React.Component {
@@ -11,11 +11,12 @@ class App extends React.Component {
     time: null
   };
   componentDidMount() {
-    timer(1000);
-    this.setState({ time: new Date().toLocaleTimeString() });
+    setInterval(() => {
+      this.setState({ time: new Date().toLocaleTimeString() });
+    }, 1000);
   }
   render() {
-    return <div>The current time is: {this.time}</div>;
+    return <div>The current time is: {this.state.time}</div>;
   }
 }
 
