@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function timer(time) {
-  return new Promise(function(resolve) {
-    setTimeout(resolve, time);
-  });
-}
+// function timer(time) {
+//   return new Promise(function(resolve) {
+//     setInterval(resolve, time);
+//   });
+// }
 class App extends React.Component {
   state = {
     time: null
