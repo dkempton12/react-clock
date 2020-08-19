@@ -10,8 +10,12 @@ class App extends React.Component {
   state = {
     time: null
   };
+  componentDidMount() {
+    timer(1000);
+    this.setState({ time: new Date().toLocaleTimeString() });
+  }
   render() {
-    return <div>Time</div>;
+    return <div>The current time is: {this.time}</div>;
   }
 }
 
