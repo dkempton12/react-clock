@@ -7,9 +7,11 @@ function timer(time) {
   });
 }
 class App extends React.Component {
-  componentDidMount() {}
+  state = {
+    time: null
+  };
   render() {
-    return <div>Clock</div>;
+    return <div>Time</div>;
   }
 }
 
